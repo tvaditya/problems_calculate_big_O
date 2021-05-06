@@ -21,16 +21,13 @@ Print a message:
 print(len(texts))
 unique_nums = []
 for lst in texts:
-    # print(lst)
     for num in lst[:-1]:
         if num not in unique_nums:
-            # print(num)
             unique_nums.append(num)
-print(len(unique_nums))
 
 for lst in calls:
     for num in lst[:-2]:
         if num not in unique_nums:
             # print(num)
             unique_nums.append(num)
-print(len(unique_nums))
+

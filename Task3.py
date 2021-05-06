@@ -44,7 +44,7 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
-print("PART A")
+
 bangalore=[]
 for lst in calls:
     if lst[0][:5] == "(080)":
@@ -67,11 +67,9 @@ print("The numbers called by people in Bangalore have codes:")
 for num in sorted(bangalore_call):
     print(num)
 
-print("PART B")
 bangalore_fixed_lines = []
 for num in bangalore:
     if num[:5]=="(080)":
-        print(num)
         bangalore_fixed_lines.append(num)
 call_perc = len(bangalore_fixed_lines)/len(bangalore)
 print(f"{round(call_perc*100, 2)} percent of calls from fixed lines in Bangalore are calls \

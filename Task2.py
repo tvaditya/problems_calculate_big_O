@@ -21,13 +21,29 @@ September 2016.".
 """
 
 most_time = 0
-for lst in calls:
-    # print(lst)
-    for num in lst[-1:]:
-        if most_time < int(num):
-            # print(num)
-            most_time = int(num)
-print(most_time)
+num_user = set()
+most_time_spent = {}
+for num in calls:
+    num_user.add(num[0])
+    num_user.add(num[1])
+
+for num in num_user:
+    most_time_spent[num] = 0
+    for lst in calls:
+        if num==lst[0] or num==lst[1]:
+            most_time_spent[num] += int(lst[3])
+maxi = 0
+for key, value in most_time_spent.items():
+    if maxi < value:
+        maxi = value
+        num_phone = key
+
+print(f"{str(num_phone)} spent the longest time, {str(maxi)} seconds, on the phone during September 2016.")
+
+
+
+
+
 
 
 
